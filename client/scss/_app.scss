@@ -1,5 +1,5 @@
 body {
-  background-color: $bgColor;
+  background-color: $colorBg;
 }
 
 .contents {
@@ -9,7 +9,7 @@ body {
 .slots {
   list-style: none;
   font-size: 0;
-  padding: 10px 15px;
+  padding: 10px 10%;
   margin-bottom: 20px;
   background: transparent;
   li {
@@ -35,33 +35,56 @@ body {
 }
 
 .win {
-  margin: 30px 0 20px;
+  margin: 20px 0 10px;
   padding: 10px;
-  font-size: 40px;
+  font-size: 35px;
   line-height: 1;
 }
 
 .bonus {
   margin: 0 0 10px;
   padding: 5px 10px;
-  font-size: 30px;
+  font-size: 25px;
   line-height: 1;
-  height: 40px;
+  height: 35px;
+  color: $colorNetEnt;
 }
 
+footer {
+  margin: 60px 0 10px;
+}
+
+.authorInfo, .sourceCodes {
+  text-align: center;
+  color: $colorGrey;
+  font-size: 16px;
+  padding: 5px 10px;
+}
+
+.author, .bitbucket  {
+  padding: 5px;
+  margin: 10px auto;
+  font-size: 16px;
+  color: $colorGrey;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .win {
+    font-size: 30px;
+    margin: 10px 10px;
+  }
+  .bonus {
+    font-size: 20px;
+    height: 30px;
+  }
+}
 @media (max-width: 543px) {
   .slots {
     padding: 10px 5px;
     li {
       padding: 5px;
     }
-  }
-  .win {
-    font-size: 30px;
-    margin: 15px 10px;
-  }
-  .bonus {
-    font-size: 20px;
-    height: 30px;
   }
 }
