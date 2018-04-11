@@ -68,6 +68,9 @@ footer {
   color: $colorGrey;
   text-decoration: none;
   cursor: pointer;
+  &:hover, &:focus {
+    color: $colorNetEnt;
+  }
 }
 
 @media (max-width: 768px) {

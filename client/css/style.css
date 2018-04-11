@@ -178,6 +178,8 @@ footer {
   color: #959da2;
   text-decoration: none;
   cursor: pointer; }
+  .author:hover, .author:focus, .bitbucket:hover, .bitbucket:focus {
+    color: #78be20; }
 
 @media (max-width: 768px) {
   .win {
