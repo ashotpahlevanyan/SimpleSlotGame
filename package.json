@@ -1,0 +1,27 @@
+{
+  "name": "simpleslot",
+  "version": "1.0.0",
+  "description": "A simple slot application generating 3 random numbers and bonus on win",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/ashotpahlevanyan/simpleslot.git"
+  },
+  "keywords": [
+    "js",
+    "es2015",
+    "node.js",
+    "express",
+    "slot",
+    "game"
+  ],
+  "author": "Ashot Pahlevanyan",
+  "license": "MIT",
+  "homepage": "https://bitbucket.org/ashotpahlevanyan/simpleslot#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}

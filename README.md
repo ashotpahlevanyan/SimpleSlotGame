@@ -1,0 +1,1 @@
+A Simple full stack application of small slots game with bonus feature
