@@ -83,5 +83,3 @@
 		return winText[val - 1];
 	}
 })();
-
-//# sourceMappingURL=index-compiled.js.map
