@@ -38,20 +38,6 @@
 		});
 	}
 
-	function XHRCall(url, cb) {
-		var request = new XMLHttpRequest();
-		request.open('GET', url);
-		request.responseType = 'json';
-		request.onload = function () {
-			if (request.status === 200) {
-				cb(request.response);
-			} else {
-				console.log(request.status + ': ' + request.statusText);
-			}
-		};
-		request.send();
-	}
-
 	function processResult(response) {
 		var set = new Set(response.numbers);
 		win.textContent = winTextByEqualValues(set.size);
@@ -73,6 +59,20 @@
 			play.style.opacity = 1;
 			bonus.textContent = '';
 		}
+	}
+
+	function XHRCall(url, cb) {
+		var request = new XMLHttpRequest();
+		request.open('GET', url);
+		request.responseType = 'json';
+		request.onload = function () {
+			if (request.status === 200) {
+				cb(request.response);
+			} else {
+				console.log(request.status + ': ' + request.statusText);
+			}
+		};
+		request.send();
 	}
 
 	function slotImageByValue(val) {
