@@ -12,13 +12,17 @@ app.use(function(req, res, next) {
 	next();
 });
 
+app.use('/images/', express.static(join(__dirname, '../client/images/')));
+app.use('/css/', express.static(join(__dirname, '../client/css/')));
+app.use('/js/', express.static(join(__dirname, '../client/js/')));
+
 app.get("/", function(req, res) {
 	res.sendFile(join(__dirname, '../client/index.html'));
 });
 
 app.get("/play", function(req, res) {
 	const numbers = generateRandoms();
-	const bonus= generateBonus(25);
+	const bonus = generateBonus(25);
 	res.status(200).json({
 		numbers, bonus
 	});
@@ -45,11 +49,7 @@ function generateRandoms() {
 	return res;
 }
 
-app.use('/images/', express.static(join(__dirname, '../client/images/')));
-app.use('/css/', express.static(join(__dirname, '../client/css/')));
-app.use('/js/', express.static(join(__dirname, '../client/js/')));
-
 app.listen(port, function () {
-	console.log('App is listening on Port: ' + port + '!');
+	console.log(`App is listening on Port: ${port}!`);
 });
 
