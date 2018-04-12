@@ -32,7 +32,7 @@
 		win = document.querySelector('.win');
 		bonus = document.querySelector('.bonus');
 
-		form.addEventListener('submit', function (e) {
+		play.addEventListener('click', function (e) {
 			e.preventDefault();
 
 			XHRCall(playUrl, processResult);

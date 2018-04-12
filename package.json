@@ -4,7 +4,7 @@
   "description": "A simple slot application generating 3 random numbers and bonus on win",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "mocha /**/**.spec.js",
     "build-css": "node-sass --include-path scss client/scss/style.scss client/css/style.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\"",
     "build": "rimraf dist/ && babel ./server/ --out-dir dist/ --ignore ./node_modules --watch",
