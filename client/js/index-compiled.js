@@ -64,10 +64,10 @@
 		if (response.bonus) {
 			play.disabled = true;
 			play.style.opacity = 0.5;
-			bonus.textContent = "Wow, you won a bonus spin, triggering.";
+			bonus.textContent = "Wow, You Won a Bonus Spin, Triggering...";
 			setTimeout(function () {
 				XHRCall(playUrl, processResult);
-			}, 6000);
+			}, 3000);
 		} else {
 			play.disabled = false;
 			play.style.opacity = 1;

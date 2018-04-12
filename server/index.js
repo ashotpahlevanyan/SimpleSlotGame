@@ -22,7 +22,7 @@ app.get("/", function(req, res) {
 
 app.get("/play", function(req, res) {
 	const numbers = generateRandoms();
-	const bonus = generateBonus(25);
+	const bonus = generateBonus(15);
 	res.status(200).json({
 		numbers, bonus
 	});
@@ -31,7 +31,7 @@ app.get("/play", function(req, res) {
 function generateBonus(percent) {
 	let val = 25;
 	if(percent >= 0 && percent <= 100) {
-		val = val;
+		val = percent;
 	}
 	const res = Math.floor(Math.random() * 100);
 	return res <= val;

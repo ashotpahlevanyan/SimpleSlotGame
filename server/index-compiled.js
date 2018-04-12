@@ -24,7 +24,7 @@ app.get("/", function (req, res) {
 
 app.get("/play", function (req, res) {
 	var numbers = generateRandoms();
-	var bonus = generateBonus(25);
+	var bonus = generateBonus(15);
 	res.status(200).json({
 		numbers: numbers, bonus: bonus
 	});
@@ -33,7 +33,7 @@ app.get("/play", function (req, res) {
 function generateBonus(percent) {
 	var val = 25;
 	if (percent >= 0 && percent <= 100) {
-		val = val;
+		val = percent;
 	}
 	var res = Math.floor(Math.random() * 100);
 	return res <= val;
