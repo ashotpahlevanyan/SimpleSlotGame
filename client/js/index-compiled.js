@@ -44,9 +44,11 @@
 		var slotItems = slots.querySelectorAll('li img');
 		var prefix = './images/';
 		for (var i = 0; i < slotItems.length; i++) {
-			slotItems[i].src = '' + prefix + slotImageByValue(response.numbers[i]);
-			slotItems[i].alt = slotImageByValue(response.numbers[i]);
+			var imgName = slotImageByValue(response.numbers[i]);
+			slotItems[i].src = '' + prefix + imgName;
+			slotItems[i].alt = imgName.toLowerCase();
 		}
+
 		if (response.bonus) {
 			play.disabled = true;
 			play.style.opacity = 0.5;

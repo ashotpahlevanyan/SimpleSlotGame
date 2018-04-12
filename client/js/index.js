@@ -44,9 +44,11 @@
 		let slotItems = slots.querySelectorAll('li img');
 		const prefix = './images/';
 		for (let i = 0; i < slotItems.length; i++) {
-			slotItems[i].src = `${prefix}${slotImageByValue(response.numbers[i])}`;
-			slotItems[i].alt = slotImageByValue(response.numbers[i]);
+			const imgName = slotImageByValue(response.numbers[i]);
+			slotItems[i].src = `${prefix}${imgName}`;
+			slotItems[i].alt = imgName.toLowerCase();
 		}
+
 		if (response.bonus) {
 			play.disabled = true;
 			play.style.opacity = 0.5;
