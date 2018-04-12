@@ -24,6 +24,7 @@ app.get('/', function(req, res) {
 });
 
 app.get('/play', function(req, res) {
+	res.header('Access-Control-Allow-Origin', '*');
 	const numbers = utils.generateRandoms();
 	const bonus = utils.generateBonus(15);
 	res.status(200).json({

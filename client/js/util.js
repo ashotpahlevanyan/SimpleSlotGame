@@ -1,10 +1,10 @@
 'use strict';
 
 function XHRCall(url, cb) {
-	var request = new XMLHttpRequest();
+	let request = new XMLHttpRequest();
 	request.open('GET', url);
 	request.responseType = 'json';
-	request.onload = function () {
+	request.onload = function() {
 		if (request.status === 200) {
 			cb(request.response);
 		} else {
@@ -15,18 +15,16 @@ function XHRCall(url, cb) {
 }
 
 function slotImageByValue(val) {
-	return 'Symbol_' + val + '.png';
+	return `Symbol_${val}.png`;
 }
 
 function winTextByEqualValues(val) {
-	var winText = ['Big Win', 'Small Win', 'No Win'];
-	return winText[val - 1];
+	const winText = ['Big Win', 'Small Win', 'No Win'];
+	return(winText[val - 1]);
 }
 
 var utils = {
-	XHRCall: XHRCall,
-	slotImageByValue: slotImageByValue,
-	winTextByEqualValues: winTextByEqualValues
+	XHRCall,
+	slotImageByValue,
+	winTextByEqualValues
 };
-
-//# sourceMappingURL=util-compiled.js.map
