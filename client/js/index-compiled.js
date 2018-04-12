@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 ;(function () {
 
@@ -11,7 +11,6 @@
 	var bonus = void 0;
 	var play = void 0;
 	var playUrl = "http://localhost:3000/play";
-	var bonusUrl = "http://localhost:3000/bonus";
 
 	document.onreadystatechange = function () {
 		if (document.readyState === 'interactive') {
@@ -59,14 +58,16 @@
 		var slotItems = slots.querySelectorAll('li img');
 		var prefix = './images/';
 		for (var i = 0; i < slotItems.length; i++) {
-			slotItems[i].src = "" + prefix + slotImageByValue(response.numbers[i]);
+			slotItems[i].src = '' + prefix + slotImageByValue(response.numbers[i]);
 			slotItems[i].alt = slotImageByValue(response.numbers[i]);
 		}
 		if (response.bonus) {
 			play.disabled = true;
 			play.style.opacity = 0.5;
 			bonus.textContent = "Wow, you won a bonus spin, triggering.";
-			setTimeout(XHRCall(playUrl, processResult), 13000);
+			setTimeout(function () {
+				XHRCall(playUrl, processResult);
+			}, 6000);
 		} else {
 			play.disabled = false;
 			play.style.opacity = 1;
@@ -74,14 +75,8 @@
 		}
 	}
 
-	function processBonus(response) {
-		if (response) {
-			bonus.textContent = "Congratulations! You won a bonus of $10.";
-		}
-	}
-
 	function slotImageByValue(val) {
-		return "Symbol_" + val + ".png";
+		return 'Symbol_' + val + '.png';
 	}
 
 	function winTextByEqualValues(val) {

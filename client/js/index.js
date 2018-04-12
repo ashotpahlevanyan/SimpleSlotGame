@@ -9,8 +9,6 @@
 	let bonus;
 	let play;
 	const playUrl = "http://localhost:3000/play";
-	const bonusUrl = "http://localhost:3000/bonus";
-
 
 	document.onreadystatechange = function() {
 		if(document.readyState === 'interactive') {
@@ -45,7 +43,7 @@
 		request.open('GET', url);
 		request.responseType = 'json';
 		request.onload = function() {
-			if(request.status === 200) {
+			if (request.status === 200) {
 				cb(request.response);
 			} else {
 				console.log(request.status + ': ' + request.statusText);
@@ -63,21 +61,17 @@
 			slotItems[i].src = `${prefix}${slotImageByValue(response.numbers[i])}`;
 			slotItems[i].alt = slotImageByValue(response.numbers[i]);
 		}
-		if(response.bonus) {
+		if (response.bonus) {
 			play.disabled = true;
 			play.style.opacity = 0.5;
 			bonus.textContent = "Wow, you won a bonus spin, triggering.";
-			setTimeout(XHRCall(playUrl, processResult), 13000);
+			setTimeout(() => {
+				XHRCall(playUrl, processResult);
+			}, 6000);
 		} else {
 			play.disabled = false;
 			play.style.opacity = 1;
 			bonus.textContent = '';
-		}
-	}
-
-	function processBonus(response) {
-		if(response) {
-			bonus.textContent = "Congratulations! You won a bonus of $10."
 		}
 	}
 

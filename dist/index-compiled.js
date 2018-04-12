@@ -30,10 +30,6 @@ app.get("/play", function (req, res) {
 	});
 });
 
-// app.get("/bonus", function(req, res) {
-// 	res.status(200).json(generateBonus(25));
-// });
-
 function generateBonus(percent) {
 	var val = 25;
 	if (percent >= 0 && percent <= 100) {
