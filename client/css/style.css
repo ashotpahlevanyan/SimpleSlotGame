@@ -135,16 +135,16 @@ body {
 
 .play {
   display: inline-block;
-  width: 60px;
-  height: 60px;
-  background: url("../images/button.png") 0 0 no-repeat;
-  background-size: 100% 100%;
   -webkit-border-radius: 50%;
   -khtml-border-radius: 50%;
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
   border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  background: url("../images/button.png") 0 0 no-repeat;
+  background-size: 100% 100%;
   border: none;
   cursor: pointer; }
 

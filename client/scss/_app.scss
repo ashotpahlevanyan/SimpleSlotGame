@@ -12,11 +12,13 @@ body {
   padding: 10px 10%;
   margin-bottom: 20px;
   background: transparent;
+
   li {
     display: inline-block;
     max-width: 33.33%;
     padding: 5px 10px;
   }
+
   img {
     width: 100%;
     height: auto;
@@ -25,11 +27,11 @@ body {
 
 .play {
   display: inline-block;
+  @include border-radius(50%);
   width: 60px;
   height: 60px;
   background: url("../images/button.png") 0 0 no-repeat;
   background-size: 100% 100%;
-  @include border-radius(50%);
   border: none;
   cursor: pointer;
 }

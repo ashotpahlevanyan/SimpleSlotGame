@@ -55,17 +55,23 @@
 	}
 
 	function processResult(response) {
-		bonus.textContent = '';
-		const set = new Set(response);
+		const set = new Set(response.numbers);
 		win.textContent = winTextByEqualValues(set.size);
-		if(set.size < 3) {
-			XHRCall(bonusUrl, processBonus);
-		}
 		let slotItems = slots.querySelectorAll('li img');
 		const prefix = './images/';
 		for (let i = 0; i < slotItems.length; i++) {
-			slotItems[i].src = `${prefix}${slotImageByValue(response[i])}`;
-			slotItems[i].alt = slotImageByValue(response[i]);
+			slotItems[i].src = `${prefix}${slotImageByValue(response.numbers[i])}`;
+			slotItems[i].alt = slotImageByValue(response.numbers[i]);
+		}
+		if(response.bonus) {
+			play.disabled = true;
+			play.style.opacity = 0.5;
+			bonus.textContent = "Wow, you won a bonus spin, triggering.";
+			setTimeout(XHRCall(playUrl, processResult), 13000);
+		} else {
+			play.disabled = false;
+			play.style.opacity = 1;
+			bonus.textContent = '';
 		}
 	}
 
