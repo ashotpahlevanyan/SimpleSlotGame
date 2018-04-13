@@ -68,12 +68,11 @@ To **run** the application, please use
  npm start
  ```
 
-## Tested
-   Application was tested on the following systems/devices
-   * MacBook Pro (Sierra) / Firefox, Safari, Chrome
-   * Ubuntu 16.04 / Firefox/Chrome
-   * iPhone 6 Plus / Firefox/Safari/Chrome
-   * iPad Air 2 / Firefox/Safari/Chrome
+## Tested : Application was tested on the following systems/devices
+    * MacBook Pro (Sierra) / Firefox, Safari, Chrome
+    * Ubuntu 16.04 / Firefox/Chrome
+    * iPhone 6 Plus / Firefox/Safari/Chrome
+    * iPad Air 2 / Firefox/Safari/Chrome
 
 ## Author
 
