@@ -36,9 +36,9 @@
         outcome (three random integers
     * between 0-5).
         There must be three types of outcomes: No Win, Small Win, Big Win.
-        Two equal integers constitutes a
-    * Small Win. Three equal integers constitutes a Big Win.
-        Server must randomly (in addition to the outcome) return if
+        Two equal integers constitutes a Small Win.
+        Three equal integers constitutes a Big Win.
+    * Server must randomly (in addition to the outcome) return if
         bonus feature should be triggered or not.
 
 ### Submission
