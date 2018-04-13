@@ -165,20 +165,27 @@ body {
 footer {
   margin: 60px 0 10px; }
 
-.authorInfo, .sourceCodes {
-  text-align: center;
-  color: #959da2;
-  font-size: 16px;
-  padding: 5px 10px; }
-
-.author, .bitbucket {
-  padding: 5px;
+.footerLinks {
+  display: block;
   margin: 10px auto;
+  text-align: center;
+  list-style: none; }
+  .footerLinks li {
+    display: block;
+    text-align: center;
+    color: #959da2;
+    font-size: 16px;
+    padding: 5px 10px; }
+    .footerLinks li + li {
+      margin-top: 5px; }
+
+.author, .source {
+  padding: 5px;
   font-size: 16px;
   color: #959da2;
   text-decoration: none;
   cursor: pointer; }
-  .author:hover, .author:focus, .bitbucket:hover, .bitbucket:focus {
+  .author:hover, .author:focus, .source:hover, .source:focus {
     color: #78be20; }
 
 @media (max-width: 768px) {

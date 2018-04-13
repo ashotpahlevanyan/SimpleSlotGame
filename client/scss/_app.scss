@@ -56,16 +56,25 @@ footer {
   margin: 60px 0 10px;
 }
 
-.authorInfo, .sourceCodes {
+.footerLinks {
+  display: block;
+  margin: 10px auto;
   text-align: center;
-  color: $colorGrey;
-  font-size: 16px;
-  padding: 5px 10px;
+  list-style: none;
+  li {
+    display: block;
+    text-align: center;
+    color: $colorGrey;
+    font-size: 16px;
+    padding: 5px 10px;
+    & + li {
+      margin-top: 5px;
+    }
+  }
 }
 
-.author, .bitbucket  {
+.author, .source  {
   padding: 5px;
-  margin: 10px auto;
   font-size: 16px;
   color: $colorGrey;
   text-decoration: none;
@@ -85,6 +94,7 @@ footer {
     height: 30px;
   }
 }
+
 @media (max-width: 543px) {
   .slots {
     padding: 10px 5px;
