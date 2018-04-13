@@ -9,7 +9,7 @@
 	let win;
 	let bonus;
 	let play;
-	const playUrl = "http://localhost:3000/play";
+	const playUrl = "/play";
 
 	document.onreadystatechange = function() {
 		if(document.readyState === 'interactive') {

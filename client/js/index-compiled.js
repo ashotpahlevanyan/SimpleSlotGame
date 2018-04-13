@@ -10,7 +10,7 @@
 	var win = void 0;
 	var bonus = void 0;
 	var play = void 0;
-	var playUrl = "http://localhost:3000/play";
+	var playUrl = "/play";
 
 	document.onreadystatechange = function () {
 		if (document.readyState === 'interactive') {
