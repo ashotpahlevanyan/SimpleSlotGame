@@ -77,6 +77,11 @@ To **run** the application, please use
     * iPhone 6 Plus / Firefox, Safari, Chrome
     * iPad Air 2 / Firefox, Safari, Chrome
 
+## Availability
+
+### Working version of the app is available at [https://slotgameashot.herokuapp.com/](https://slotgameashot.herokuapp.com/)
+
+
 ## Author
 
    **[Ashot Pahlevanyan](https://www.linkedin.com/in/ashot-pahlevanyan-b2a22747/)** - *Initial work* - [ashotpahlevanyan](https://github.com/ashotpahlevanyan)
